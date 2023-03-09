@@ -3,5 +3,7 @@
 import re
 text = input()
 pattern = "[A-Z]"
-x = re.split(pattern, text)
-print(x)
+
+text2 =re.findall(r'[a-zA-Z][^A-Z]*', text)
+
+print()

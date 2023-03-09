@@ -4,7 +4,5 @@ import re
 text = input()
 text = text[0].lower() + text[1:]
 pattern = "_"
-
-for i in text:
-    if i.isupper():
-        text = re.sub(i, pattern, text)
+text2 = re.sub(r'(?<!^)(?=[A-Z])', '_', text).lower()
+print(text2)
